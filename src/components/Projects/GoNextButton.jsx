@@ -13,7 +13,7 @@ const GoNextButton = () => {
         });
       }}
     >
-      <h3>Go next project</h3>
+      <h3>Mai departe</h3>
     </button>
   );
 };

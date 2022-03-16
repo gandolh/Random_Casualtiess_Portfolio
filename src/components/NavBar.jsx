@@ -13,7 +13,7 @@ const NavBar = (props) => {
     <div className={getNavBarClassName()}>
       <div
         className="logo"
-        style={{ backgroundImage: "url('./imgs/fox.png')" }}
+        style={{ backgroundImage: "url('./imgs/logo.jpg')" }}
       ></div>
 
       <div className="linkMenu">

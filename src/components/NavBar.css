@@ -17,10 +17,12 @@ a {
   color:#bac3cb;
 }
 .logo {
-  height: 100%;
-  width: 100px;
+  height: 65px;
+  width: 65px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
 }
 .linkMenu{
     margin-left:-25px;

@@ -6,8 +6,10 @@ const FirstPageRC = () => {
     <div className="ShowCaseInfoRC">
       <h1> RandomCasualtiess </h1>
       <p>
-        This is my Canvas animations study. It took 1 year and it is mostly
-        coded in p5.js
+        "Random casualtiess" reprezinta pentru mine intreaga perioada in care
+        am studiat tainele JavaScript-ului si grafica programatica.<br/>
+        In sliderul alaturat si mai jos sunt prezentate cateva exemple de cum am folosit p5.js
+        pentru a realiza imagini pe un obiect de tip Canvas.
       </p>
       <Tilt tiltReverse={true} className="RCPoster" perspective="1000">
         <img

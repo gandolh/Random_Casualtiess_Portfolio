@@ -1,11 +1,12 @@
 
 const express = require('express')
+require('dotenv').config();
 var cors = require('cors')
 const app = express()
-const port = 8000
+const port = process.env.PORT
 app.use(cors())
 const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://gandolh:admin@mainfreecluster.1lwlz.mongodb.net/myposts?retryWrites=true&w=majority";
+const uri = process.env.MONGODBURL;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(async (err) => {
   const dbo= client.db("myPosts")
