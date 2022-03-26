@@ -12,16 +12,23 @@ const AnimationMenu = () => {
     },[]);
 
 
-    const buildRecursiveMenu = (animations_json)=>{
+    const buildRecursiveMenu = (animations_json,iteration)=>{
 
-        let submenu;
         // return JSON.stringify(animations_json);
-        console.log(animations_json);
-        const values = Object.values(animations_json);
-        return (<div style={{marginLeft:'25px'}}>{Object.keys(animations_json)[0]}
-                    {(values || []).map((el)=>
-                    <div>
-                        {typeof(el) == 'object'  ?buildRecursiveMenu(el):<a href={el}>aici</a>}
+        const entries = Object.entries(animations_json);
+        // console.log(entries);
+        return (<div style={{marginLeft:'25px'}}>
+            
+                    {(entries || []).map(([key,el],i)=>
+                    <div key ={`animMenu_${iteration}_${i}`}>
+                        {key}
+                        {console.log(key,key.includes('.html')) }
+                        {
+                            !(key.includes('html'))  && typeof(el) =='object'?
+                            (buildRecursiveMenu(el))
+                            :
+                            (<a href='123'>aici</a>)
+                        }
                     </div>
                     )}
                 </div>)
@@ -29,7 +36,7 @@ const AnimationMenu = () => {
 	return (
 		<div className="containerWebSCRC" id="AnimationMenu">
             <h3>Generative art:</h3>
-			{buildRecursiveMenu(animations)}
+			{buildRecursiveMenu(animations,0)}
 		</div>
 	);
 };
