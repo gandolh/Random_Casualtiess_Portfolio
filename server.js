@@ -19,6 +19,13 @@ client.connect(async (err) => {
         // res.send('Hello World1!')
         res.send(posts_data)
       })
+
+      app.get('/animationrefs',(req,res)=>{
+          //https://github.com/gandolh/GenerativeArt
+
+
+      })
+
       
       app.listen(port, () => {
         console.log(`Example app listening at http://localhost:${port}`)
