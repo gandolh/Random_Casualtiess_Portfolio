@@ -134,3 +134,11 @@ transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(0.85, 0.85, 1
   will-change: transform;
 transform: perspective(1000px) rotateX(0deg) rotateY(-30deg) scale3d(1, 1, 1);
 }
+
+#animMenu_0_0 > div{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    gap:20px;
+
+}

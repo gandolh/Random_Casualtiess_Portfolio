@@ -1,4 +1,5 @@
 import React, { useState, useEffect }  from "react";
+import { Link } from "react-router-dom";
 const AnimationMenu = () => {
     const [animations, setAnimations] = useState([])
     useEffect(() => {   
@@ -10,33 +11,50 @@ const AnimationMenu = () => {
     fetchData(`${window.appsettings.SERVER_ADRESS}/getanimationpath`);
     
     },[]);
+    const arrayRemove = (arr, value) => { 
+    
+        return arr.filter(function(ele){ 
+            return ele != value; 
+        });
+    }
 
+    const buildAnimLink = (path)=>{
+        let newPath = path;
+        if(path!=undefined)
+            newPath =encodeURI( arrayRemove(path.split('/'),'public').join('/'));
+        return newPath;
+    }
 
     const buildRecursiveMenu = (animations_json,iteration)=>{
 
         // return JSON.stringify(animations_json);
         const entries = Object.entries(animations_json);
         // console.log(entries);
-        return (<div style={{marginLeft:'25px'}}>
+        return (<div >
             
-                    {(entries || []).map(([key,el],i)=>
-                    <div key ={`animMenu_${iteration}_${i}`}>
-                        {key}
-                        {console.log(key,key.includes('.html')) }
+                    {(entries || []).map(([key,el],i)=>{
+
+                        
+                    return (
+                    
+                        !key.includes('.html') && <div id={`animMenu_${iteration}_${i}`}
+                         key ={`animMenu_${iteration}_${i}`}>
+                        <Link target="_blank" class={"animanchors" + (!buildAnimLink(el['index.html']) && " active" ) }
+                         to={buildAnimLink(el['index.html'])}>{key}</Link>
                         {
-                            !(key.includes('html'))  && typeof(el) =='object'?
-                            (buildRecursiveMenu(el))
-                            :
-                            (<a href='123'>aici</a>)
+                            typeof(el) =='object' && (buildRecursiveMenu(el))
                         }
-                    </div>
-                    )}
+                    </div>)
+                    }
+                    )
+                    }
                 </div>)
     }
 	return (
 		<div className="containerWebSCRC" id="AnimationMenu">
-            <h3>Generative art:</h3>
-			{buildRecursiveMenu(animations,0)}
+            <span id="recursiveMenuParent">
+			    {buildRecursiveMenu(animations,0)}
+            </span>
 		</div>
 	);
 };
