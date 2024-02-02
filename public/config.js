@@ -1,3 +1,1 @@
-var appsettings = {
-    SERVER_ADRESS:'http://localhost:8000'
-}
+// TODO: Put here static data

@@ -8,7 +8,7 @@ const AnimationMenu = () => {
         const data =await  animationPaths.json();
         setAnimations(data);
     }
-    fetchData(`${window.appsettings.SERVER_ADRESS}/getanimationpath`);
+    // fetchData(`${window.appsettings.SERVER_ADRESS}/getanimationpath`);
     
     },[]);
     const arrayRemove = (arr, value) => { 

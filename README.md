@@ -6,6 +6,3 @@
     -- npm run build for building the production version
     -- npm run eject for risky jobs
 
-## i added two commands: 
-    --npm run debug for starting the node server with nodemon
-    --npm run server for starting with default server option.
