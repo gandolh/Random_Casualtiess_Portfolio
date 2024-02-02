@@ -1,6 +1,6 @@
 import React, { useState, useEffect }  from "react";
 import { Link } from "react-router-dom";
-import config from "../../../public/config";
+import config from "@/config";
 const AnimationMenu = () => {
     const [animations, setAnimations] = useState([])
     useEffect(() => {   

@@ -3,8 +3,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import "swiper/swiper.min.css";
-import "swiper/components/navigation/navigation.min.css";
+import "@nodeModule/swiper/swiper.min.css";
+import "@nodeModule/swiper/modules/navigation.min.css";
 
 // import Swiper core and required modules
 import SwiperCore, { Navigation } from "swiper/core";
