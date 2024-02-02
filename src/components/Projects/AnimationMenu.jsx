@@ -1,15 +1,10 @@
 import React, { useState, useEffect }  from "react";
 import { Link } from "react-router-dom";
+import config from "../../../public/config";
 const AnimationMenu = () => {
     const [animations, setAnimations] = useState([])
     useEffect(() => {   
-        async function fetchData(url) {
-        const animationPaths = await fetch(url);
-        const data =await  animationPaths.json();
-        setAnimations(data);
-    }
-    // fetchData(`${window.appsettings.SERVER_ADRESS}/getanimationpath`);
-    
+    setAnimations(config.AnimationPath);
     },[]);
     const arrayRemove = (arr, value) => { 
     
