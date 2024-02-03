@@ -109,9 +109,18 @@ html {
   align-items:flex-end;
 }
 
-#AnimationMenu {
+.AnimationMenu {
   display:  grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.InnerAnimationMenu{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
 }
 
 .seeMoreRandomCasualtiess{
