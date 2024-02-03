@@ -24,18 +24,22 @@ def create_directory_structure_dict(folder_path):
     # Iterate through all directories in the specified folder
     for root, dirs, files in os.walk(folder_path):
         current_dir = os.path.relpath(root, folder_path)
-
+        if current_dir == '.':
+            continue
         # Split the relative path into a list of directory names
         dir_names = current_dir.split(os.path.sep)
 
-        # Iterate through the directory names to build the hierarchy
-        for dir_name in dir_names:
-            if dir_name not in structure_dict:
-                # Add the directory to the current level with an empty list for subdirectories
-                structure_dict[dir_name] = []
+        # Only consider the first layer of directories
+        first_layer_dir = dir_names[0]
 
-            # Append the current subdirectory as a dictionary to the list
-            structure_dict[dir_name].append({'name': dir_name, 'path': current_dir})
+        # Check if the first layer directory is not in the structure_dict
+        if first_layer_dir not in structure_dict:
+            # Add the first layer directory to the dictionary with an empty list for subdirectories
+            structure_dict[first_layer_dir] = []
+
+        # Iterate through the second layer of directories and append them to the list
+        for second_layer_dir in dir_names[1:]:
+            structure_dict[first_layer_dir].append({'name': second_layer_dir, 'path': os.path.join(current_dir)})
 
     return structure_dict
 
@@ -43,7 +47,7 @@ def create_directory_structure_dict(folder_path):
 
 if __name__ == "__main__":
     # Specify the folder path here
-    folder_path = 'D:\projects\my_github\Random_Casualtiess_Portfolio\public\GenerativeArt'
+    folder_path = 'D:\projects\my_github\Random_Casualtiess_Portfolio\GenerativeArt'
     # do renaming
     # replace(folder_path)
 
