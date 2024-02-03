@@ -1,28 +1,27 @@
 import React from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import "@nodeModule/swiper/swiper.min.css";
 import "@nodeModule/swiper/modules/navigation.min.css";
 
 // import Swiper core and required modules
-import SwiperCore, { Navigation } from "swiper/core";
+import { Navigation } from "swiper/modules";
 
 // install Swiper modules
-SwiperCore.use([Navigation]);
 const SecondPageRC = () => {
-  const swiperNamesImgs = [];
-  for (let i = 1; i < 7; i++)
-    swiperNamesImgs.push(
-      <SwiperSlide key={i}>
-        <img src={`./imgs/swiper_${i}.jpg`} alt="swiper_img"/>
-      </SwiperSlide>
-    );
+
   return (
     <>
+
+
       <Swiper navigation={true} className="SwiperRC" loop={true}>
-        {swiperNamesImgs}
+        {[1,2,3,4,5,6].map((i) => (
+          <SwiperSlide key={i}>
+            <img src={`./imgs/swiper_${i}.jpg`} alt="swiper_img" />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
