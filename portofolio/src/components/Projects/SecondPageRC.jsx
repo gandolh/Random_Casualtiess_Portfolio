@@ -14,15 +14,16 @@ const SecondPageRC = () => {
 
   return (
     <>
+      <div>
 
-
-      <Swiper navigation={true} className="SwiperRC" loop={true}>
-        {[1,2,3,4,5,6].map((i) => (
-          <SwiperSlide key={i}>
-            <img src={`./imgs/swiper_${i}.jpg`} alt="swiper_img" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <Swiper navigation={true} className="SwiperRC" loop={true}>
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <SwiperSlide key={i}>
+              <img src={`./imgs/swiper_${i}.jpg`} alt="swiper_img" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </>
   );
 };

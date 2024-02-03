@@ -1,6 +1,6 @@
 import NavBar from "@/components/NavBar";
 import React from "react";
-
+import { Outlet } from "react-router-dom";
 export default function Root() {
   const [NavLinks, setNavLinks] = React.useState([
     { id: 1, name: "Home", anchor: "/", active: true },
@@ -20,6 +20,7 @@ export default function Root() {
       <>
          <div className="container">
         <NavBar navlinks={NavLinks} onChangeActive={changeActive} />
+        <Outlet />
       </div>
       </>
     );
