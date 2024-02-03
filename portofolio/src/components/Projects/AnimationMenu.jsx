@@ -34,7 +34,7 @@ const AnimationMenu = () => {
                     
                         !key.includes('.html') && <div id={`animMenu_${iteration}_${i}`}
                          key ={`animMenu_${iteration}_${i}`}>
-                        <Link target="_blank" class={"animanchors" + (!buildAnimLink(el['index.html']) && " active" ) }
+                        <Link target="_blank" className={"animanchors" + (!buildAnimLink(el['index.html']) && " active" ) }
                          to={buildAnimLink(el['index.html'])}>{key}</Link>
                         {
                             typeof(el) =='object' && (buildRecursiveMenu(el))

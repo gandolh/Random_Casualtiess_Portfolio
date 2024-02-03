@@ -4,10 +4,10 @@ import SecondPageRC from "./SecondPageRC";
 import './Projects.css';
 const RandomCasualtiess = () => {
   return (
-    <div className="containerRandomCas">
-      <FirstPageRC/>
+     <div className="containerRandomCas">
+       <FirstPageRC/>
       <SecondPageRC/>
-    </div>
+     </div>
   );
 };
 
