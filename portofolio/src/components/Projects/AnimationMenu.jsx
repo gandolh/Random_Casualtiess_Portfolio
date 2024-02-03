@@ -2,10 +2,8 @@ import React, { useState, useEffect }  from "react";
 import { Link } from "react-router-dom";
 import config from "@/config";
 const AnimationMenu = () => {
-    const [animations, setAnimations] = useState([])
-    useEffect(() => {   
-    setAnimations(config.AnimationPath);
-    },[]);
+    const animations = {...config.AnimationPath};
+   
     const arrayRemove = (arr, value) => { 
     
         return arr.filter(function(ele){ 
@@ -20,10 +18,11 @@ const AnimationMenu = () => {
         return newPath;
     }
 
-    const buildRecursiveMenu = (animations_json,iteration)=>{
+    const buildRecursiveMenu = (animations_json, iteration)=>{
 
-        // return JSON.stringify(animations_json);
-        const entries = Object.entries(animations_json);
+        console.log(animations_json);
+        return JSON.stringify(animations_json);
+        // const entries = Object.entries(animations_json);
         // console.log(entries);
         return (<div >
             
@@ -46,10 +45,8 @@ const AnimationMenu = () => {
                 </div>)
     }
 	return (
-		<div className="containerWebSCRC" id="AnimationMenu">
-            <span id="recursiveMenuParent">
+		<div id="AnimationMenu">
 			    {buildRecursiveMenu(animations,0)}
-            </span>
 		</div>
 	);
 };
