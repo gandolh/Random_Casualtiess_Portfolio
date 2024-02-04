@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "@/styles/NavBar.css";
+import InstagramIcon from "@/icons/InstagramIcon";
 type NavbarProps = {
   navlinks: Array<NavLink>;
   onChangeActive: (id: number) => void;
 };
 
-const NavBar = ({navlinks, onChangeActive} : NavbarProps) => {
+const NavBar = ({ navlinks, onChangeActive }: NavbarProps) => {
   // console.log(props)
   const [clicked, setClicked] = useState(false);
-  const getNavBarClassName = ()=>{
-    if(clicked)return "navbar responsive";
-     return "navbar";
+  const getNavBarClassName = () => {
+    if (clicked) return "navbar responsive";
+    return "navbar";
   }
   return (
     <div className={getNavBarClassName()}>
@@ -23,12 +24,12 @@ const NavBar = ({navlinks, onChangeActive} : NavbarProps) => {
       <div className="linkMenu">
         {navlinks.map((link) => (
           <Link
-          to={link.anchor}
-          className={link.active ? "active" : ""}
-          key={link.id}
-          onClick={() => {
-            onChangeActive(link.id);
-          }}
+            to={link.anchor}
+            className={link.active ? "active" : ""}
+            key={link.id}
+            onClick={() => {
+              onChangeActive(link.id);
+            }}
           >
             {link.name}
           </Link>
@@ -37,8 +38,13 @@ const NavBar = ({navlinks, onChangeActive} : NavbarProps) => {
       <a
         href="https://www.instagram.com/random_casualtiess/"
         className="follow"
-        >
-        Instagram
+      >
+        <span className="followIcon">
+          <InstagramIcon />
+        </span>
+        <span className="followText">
+          Instagram
+        </span>
       </a>
       <img
         src="./imgs/menu.svg"
