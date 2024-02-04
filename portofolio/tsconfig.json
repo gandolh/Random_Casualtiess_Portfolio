@@ -22,7 +22,6 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@nodeModule/*": ["./node_modules/*"]
     }
   },
   "include": ["src"],
