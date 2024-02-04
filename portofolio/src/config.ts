@@ -453,7 +453,7 @@ const animationPaths = {
 
 
 const sortedObj = Object.fromEntries(
-  Object.entries(animationPaths).sort(([key1, value1], [key2, value2]) => value1.length - value2.length)
+  Object.entries(animationPaths).sort(([_1, value1], [_2, value2]) => value1.length - value2.length)
 );
 
 const config = {
