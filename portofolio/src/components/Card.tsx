@@ -1,8 +1,11 @@
-import React from "react";
 import Tilt from 'react-parallax-tilt';
 import "./Card.css";
-const Card = (props) => {
-  const { img, alt_img, category, title } = props.article;
+type CardProps = {
+  article: Article;
+}
+
+const Card = ({article} : CardProps) => {
+  const { img, alt_img, category, title } = article;
   return (
     <Tilt     
     tiltReverse={true}

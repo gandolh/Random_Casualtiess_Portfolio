@@ -1,4 +1,3 @@
-import React from "react";
 import Tilt from "react-parallax-tilt";
 
 const FirstPageRC = () => {
@@ -9,7 +8,7 @@ const FirstPageRC = () => {
         "Random casualtiess" is a project that I've been working on for a while.
         It's a collection of small projects, animations, and games that I've made mainly in p5.js. <br/>
       </p>
-      <Tilt tiltReverse={true} className="RCPoster" perspective="500">
+      <Tilt tiltReverse={true} className="RCPoster" perspective={500}>
         <img
           src="./imgs/poster1.jpg"
           draggable="false"

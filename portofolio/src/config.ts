@@ -1,3 +1,5 @@
+
+
 const animationPaths = {
   "2d": [
     {
@@ -448,12 +450,14 @@ const animationPaths = {
     }
   ]
 };
+
+
 const sortedObj = Object.fromEntries(
   Object.entries(animationPaths).sort(([key1, value1], [key2, value2]) => value1.length - value2.length)
 );
 
 const config = {
-    AnimationPath: sortedObj
+    AnimationPath: sortedObj as AnimationPaths
 };
 
 export default config;

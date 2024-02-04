@@ -1,14 +1,18 @@
-import React from "react";
 import "./BlogCategories.css";
-const BlogCategories = (props) => {
+type BlogCategoriesProps = {
+  blogCateg: Array<BlogCategory>;
+  onChangeActiveCategory: (id: number) => void;
+}
+
+const BlogCategories = ({blogCateg, onChangeActiveCategory } : BlogCategoriesProps) => {
   // console.log(props);
   return (
     <div className="blogCategories">
-      {props.blogCateg.map((category) => (
+      {blogCateg.map((category) => (
           <div className={`tab ${category.active ? "active" : ""}`}
           key={category.id}
         onClick={()=>{
-           props.onChangeActiveCategory(category.id);
+           onChangeActiveCategory(category.id);
         }}
         >
           {category.name}

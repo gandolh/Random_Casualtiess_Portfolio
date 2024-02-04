@@ -1,4 +1,3 @@
-import React from "react";
 // Import Swiper React components
 import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 

@@ -1,8 +1,12 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./NavBar.css";
-const NavBar = (props) => {
+type NavbarProps = {
+  navlinks: Array<NavLink>;
+  onChangeActive: (id: number) => void;
+};
+
+const NavBar = ({navlinks, onChangeActive} : NavbarProps) => {
   // console.log(props)
   const [clicked, setClicked] = useState(false);
   const getNavBarClassName = ()=>{
@@ -17,13 +21,13 @@ const NavBar = (props) => {
       ></div>
 
       <div className="linkMenu">
-        {props.navlinks.map((link) => (
+        {navlinks.map((link) => (
           <Link
           to={link.anchor}
           className={link.active ? "active" : ""}
           key={link.id}
           onClick={() => {
-            props.onChangeActive(link.id);
+            onChangeActive(link.id);
           }}
           >
             {link.name}
