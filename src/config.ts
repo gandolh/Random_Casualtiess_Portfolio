@@ -1,4 +1,4 @@
-
+const basePath= "/Random_Casualtiess_Portfolio";
 
 const animationPaths = {
   "2d": [
@@ -457,7 +457,8 @@ const sortedObj = Object.fromEntries(
 );
 
 const config = {
-    AnimationPath: sortedObj as AnimationPaths
+    AnimationPath: sortedObj as AnimationPaths,
+    basePath: basePath as string
 };
 
 export default config;

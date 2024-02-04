@@ -1,13 +1,14 @@
 import NavBar from "@/components/layout/NavBar";
+import config from "@/config";
 import React from "react";
 import { Outlet } from "react-router-dom";
 
 
 export default function Root() {
   const [NavLinks, setNavLinks] = React.useState<Array<NavLink>>([
-    { id: 1, name: "Home", anchor: "/", active: true },
-    { id: 2, name: "Projects", anchor: "/projects", active: false },
-    { id: 3, name: "Contact", anchor: "/contact", active: false },
+    { id: 1, name: "Home", anchor: config.basePath, active: true },
+    { id: 2, name: "Projects", anchor: config.basePath + "/projects", active: false },
+    { id: 3, name: "Contact", anchor: config.basePath + "/contact", active: false },
   ]);
 
   const changeActive = (id: number) => {
@@ -19,8 +20,8 @@ export default function Root() {
 
   return (
     <>
-      <NavBar navlinks={NavLinks} onChangeActive={changeActive} />  
-        <Outlet />
+      <NavBar navlinks={NavLinks} onChangeActive={changeActive} />
+      <Outlet />
     </>
   );
 }

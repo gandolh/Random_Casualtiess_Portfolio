@@ -11,23 +11,24 @@ import ErrorPage from "@/pages/error-page";
 import "@/pages/Home";
 import Home from '@/pages/Home';
 import Contact from './pages/Contact';
+import config from '@/config';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: config.basePath,
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: "",
         element: <Home />
       },
       {
-        path: "/projects",
+        path: "projects",
         element: <Projects />,
       },
       {
-        path: "/contact",
+        path: "contact",
         element: <Contact/>,
       }
     ]

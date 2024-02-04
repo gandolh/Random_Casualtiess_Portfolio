@@ -6,7 +6,7 @@ const Banner = () => {
         <p className="welcome">Welcome to</p>
         <h1 className="mainTitle">Random Casualtiess Portfolio</h1>
         </div>
-        <img src="imgs/hello.svg" className="ilustration" alt="hello" draggable="false"></img>
+        <img alt="ilustration" src="Random_Casualtiess_Portfolio/imgs/hello.svg" className="ilustration" draggable="false"></img>
         <div></div>
     </div> );
 }
