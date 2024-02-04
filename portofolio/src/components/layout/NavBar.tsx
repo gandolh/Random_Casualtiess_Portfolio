@@ -38,7 +38,7 @@ const NavBar = ({navlinks, onChangeActive} : NavbarProps) => {
         href="https://www.instagram.com/random_casualtiess/"
         className="follow"
         >
-        Follow
+        Instagram
       </a>
       <img
         src="./imgs/menu.svg"

@@ -1,5 +1,4 @@
 .banner {
-    background-color: #3197d6;
     width: 100%;
     height: 200px;
     text-align: center;
@@ -11,11 +10,13 @@
     color: #f0f0f0;
     opacity: 75%;
     margin-bottom: 0;
+    font-size: 1.25em;
 }
 
 .mainTitle {
     margin-top: 5px;
     color: #f0f0f0;
+    font-size: 1.5em;
 }
 
 .bannerText {
@@ -27,6 +28,40 @@
 
 .ilustration {
     margin-top: 10px;
-    height: calc( 100% - 10px);
+    height: calc(100% - 10px);
     width: 100%;
+}
+
+.chat-body {
+    padding-top: 25px;
+    margin-top: 25px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.chat-body-msg {
+    width: 56.77%;
+    border-radius: 45px;
+    font-size: 1.25em;
+    border-radius: 50px;
+    padding: 1.25rem;
+
+}
+
+.chat-body-msg:nth-child(odd){
+    margin-left: 2rem;
+    background: #3197d6;
+    box-shadow:  7px 7px 14px #2a80b6,
+    -7px -7px 14px #38aef6;
+    color: #f0f0f0;
+}
+
+.chat-body-msg:nth-child(even) {
+    margin-right: 2rem;
+    background: #f0f0f0;
+    box-shadow:  -7px 7px 14px #2a80b6,
+    7px -7px 14px #38aef6;
+    align-self: flex-end;
 }
