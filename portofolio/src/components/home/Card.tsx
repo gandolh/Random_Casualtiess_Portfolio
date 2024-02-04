@@ -1,5 +1,5 @@
 import Tilt from 'react-parallax-tilt';
-import "./Card.css";
+import "@/styles/Card.css";
 type CardProps = {
   article: Article;
 }

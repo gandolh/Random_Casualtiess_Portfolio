@@ -1,6 +1,6 @@
-import FirstPageRC from "./FirstPageRC";
-import SecondPageRC from "./SecondPageRC";
-import './Projects.css';
+import FirstPageRC from "@/components/projects/FirstPageRC";
+import SecondPageRC from "@/components/projects/SecondPageRC";
+import '@/styles/Projects.css';
 const RandomCasualtiess = () => {
   return (
     <div className="containerRandomCas">

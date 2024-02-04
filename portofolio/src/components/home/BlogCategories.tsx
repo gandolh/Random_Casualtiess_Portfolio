@@ -1,4 +1,4 @@
-import "./BlogCategories.css";
+import "@/styles/BlogCategories.css";
 type BlogCategoriesProps = {
   blogCateg: Array<BlogCategory>;
   onChangeActiveCategory: (id: number) => void;

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Banner from "./Banner";
-import BlogCategories from "./BlogCategories";
-import Posts from "./Posts";
+import Banner from "@/components/home/Banner";
+import BlogCategories from "@/components/home/BlogCategories";
+import Posts from "@/components/home/Posts";
 
 const Home = () => {
   const [blogCateg, setBlogCateg] = useState<Array<BlogCategory>>([

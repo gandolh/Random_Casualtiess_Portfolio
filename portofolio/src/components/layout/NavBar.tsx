@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import "./NavBar.css";
+import "@/styles/NavBar.css";
 type NavbarProps = {
   navlinks: Array<NavLink>;
   onChangeActive: (id: number) => void;

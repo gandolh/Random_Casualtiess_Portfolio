@@ -1,5 +1,5 @@
-import Card from './Card';
-import './Posts.css'
+import Card from '@/components/home/Card';
+import '@/styles/Posts.css'
 type PostsProps = {
     articles: Array<Article>;
 }
