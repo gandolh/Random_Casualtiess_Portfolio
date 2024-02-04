@@ -1,4 +1,4 @@
-const basePath= "/Random_Casualtiess_Portfolio";
+const basePath= "/Random_Casualtiess_Portfolio/";
 
 const animationPaths = {
   "2d": [

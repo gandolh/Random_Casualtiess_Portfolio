@@ -20,15 +20,15 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "",
+        path: config.basePath,
         element: <Home />
       },
       {
-        path: "projects",
+        path: config.basePath +"projects",
         element: <Projects />,
       },
       {
-        path: "contact",
+        path: config.basePath + "contact",
         element: <Contact/>,
       }
     ]
