@@ -3,7 +3,7 @@ type EditorIframeProps = {
     uid: number
 }
 
-const EditorIframe = ({ srcPath, uid }: EditorIframeProps) => {
+const EditorIframe = ({ srcPath }: EditorIframeProps) => {
     return (
         <>
             <div>
