@@ -1,1 +1,0 @@
-most of those needs to click on something (or screen) to go to the next generation.

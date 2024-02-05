@@ -1,4 +1,3 @@
-import config from "@/config";
 import { Button, Modal } from "flowbite-react";
 type AnimationModalProps = {
     animation : AnimationPath;
@@ -7,7 +6,7 @@ type AnimationModalProps = {
 };
 
 const AnimationModal = ({animation, openModal, setOpenModal} : AnimationModalProps) => {
-    const prefix = `${window.location.origin}${config.basePath}GenerativeArt/`;
+    const prefix = `https://gandolh.github.io/GenerativeArt/`;
 
     const getAnimUrl = (path: string) => {
      return prefix + path.replace("\\","/") + "/index.html";
