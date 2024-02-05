@@ -11,21 +11,23 @@ const AnimationMenu = () => {
         setAnimationPath(path);
     };
     const animations = { ...config.AnimationPath };
+    const entries = Object.entries(animations);
 
-    const buildMenu = (animations: AnimationPaths) => {
-
-        const entries = Object.entries(animations);
-        return (<div className="AnimationMenu">
+    return (
+        <div>
+            <h3> <center> Animations </center></h3>
+            <div className="AnimationMenu">
             {(entries || []).map(([key, value], i) => {
                 return (
-                    <div className="InnerAnimationMenu" key={"InnerAnimationMenu" + i} >
+                    <div id={"InnerAnimationMenu" + i} key={"InnerAnimationMenu" + i} className="InnerAnimationMenu"  >
                         <h3 className="mytitleparagraph font-semibold"><center> {key}</center></h3>
                         {value.map((v, j) => (
                             <>
-                            <Button 
+                            <Button
+                            id={`hrefAnimation${i}${j}`} 
+                            key={`hrefAnimation${i}${j}`}
                             size="sm" 
                             color="gray"
-                            key={"hrefAnimation" + j} 
                             onClick={handleOpenModal(v)}>{v.name}</Button>
                             </>
                         ))}
@@ -34,12 +36,7 @@ const AnimationMenu = () => {
             })}
 
             <AnimationModal animation={animationPath} openModal={openModal} setOpenModal={setOpenModal} />
-        </div>)
-    }
-    return (
-        <div>
-            <h3> <center> Animations </center></h3>
-            {buildMenu(animations)}
+        </div>
         </div>
     );
 };
