@@ -13,6 +13,7 @@ import "@/pages/Home";
 import Home from '@/pages/Home';
 import Contact from './pages/Contact';
 import config from '@/config';
+import Editor from './pages/Editor';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: config.basePath + "contact",
         element: <Contact/>,
+      },
+      {
+        path: config.basePath + "editor",
+        element: <Editor/>,
       }
     ]
   }

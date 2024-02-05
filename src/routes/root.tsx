@@ -8,7 +8,8 @@ export default function Root() {
   const [NavLinks, setNavLinks] = React.useState<Array<NavLink>>([
     { id: 1, name: "Home", anchor: config.basePath, active: true },
     { id: 2, name: "Projects", anchor: config.basePath + "projects", active: false },
-    { id: 3, name: "Contact", anchor: config.basePath + "contact", active: false },
+    { id: 3, name: "Editor", anchor: config.basePath + "editor", active: false },
+    { id: 4, name: "Contact", anchor: config.basePath + "contact", active: false },
   ]);
 
   const changeActive = (id: number) => {

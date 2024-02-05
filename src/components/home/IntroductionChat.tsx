@@ -1,6 +1,9 @@
+import config from "@/config";
+
 const IntroductionChat = () => {
     const anchorStyle = { color: '#1F2937', textDecoration: 'underline' };
 
+    config
     return (
         <div className="chat-body">
             <div className="chat-body-msg">Who are you?</div>
@@ -10,7 +13,7 @@ const IntroductionChat = () => {
                 If you want to see some more you can click the Instagram button on right corner.</div>
             <div className="chat-body-msg">Where can i see all animations?</div>
             <div className="chat-body-msg">
-                Here is the visual page: <a style={anchorStyle} href="/visual">Visual</a>
+                Here is the visual page: <a style={anchorStyle} href={`${config.basePath}/editor`}>Editor</a>
                 <br /> Here is the GitHub for the code: <a style={anchorStyle} target="_blank" href="https://github.com/gandolh/Random_Casualtiess_Portfolio/tree/main/portofolio/public/GenerativeArt">Code</a>
             </div>
         </div>
